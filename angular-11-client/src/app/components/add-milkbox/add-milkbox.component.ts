@@ -1,32 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { Tutorial } from 'src/app/models/milkbox.model';
-import { MilkboxService } from 'src/app/services/milkbox.service';
+import { MilkBox } from 'src/app/models/milkbox.model';
+import { MilkBoxService } from 'src/app/services/milkbox.service';
 
 @Component({
   selector: 'app-add-tutorial',
   templateUrl: './add-tutorial.component.html',
   styleUrls: ['./add-tutorial.component.css']
 })
-export class AddTutorialComponent implements OnInit {
-  tutorial: Tutorial = {
-    title: '',
-    description: '',
-    published: false
+export class AddMilkBoxComponent implements OnInit {
+  tutorial: MilkBox = {
+    codigo: '',
+    nome: ''
   };
   submitted = false;
 
-  constructor(private tutorialService: MilkboxService) { }
+  constructor(private milkboxService: MilkBoxService) { }
 
   ngOnInit(): void {
   }
 
   saveTutorial(): void {
     const data = {
-      title: this.tutorial.title,
-      description: this.tutorial.description
+      title: this.tutorial.codigo,
+      description: this.tutorial.nome
     };
 
-    this.tutorialService.create(data)
+    this.milkboxService.create(data)
       .subscribe(
         response => {
           console.log(response);
@@ -40,9 +39,8 @@ export class AddTutorialComponent implements OnInit {
   newTutorial(): void {
     this.submitted = false;
     this.tutorial = {
-      title: '',
-      description: '',
-      published: false
+      codigo: '',
+      nome: ''
     };
   }
 

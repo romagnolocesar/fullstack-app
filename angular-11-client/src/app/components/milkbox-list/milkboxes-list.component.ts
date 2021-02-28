@@ -4,8 +4,8 @@ import { MilkboxService } from 'src/app/services/milkbox.service';
 
 @Component({
   selector: 'app-tutorials-list',
-  templateUrl: './tutorials-list.component.html',
-  styleUrls: ['./tutorials-list.component.css']
+  templateUrl: './milkboxes-list.component.html',
+  styleUrls: ['./milkboxes-list.component.css']
 })
 export class TutorialsListComponent implements OnInit {
   tutorials?: Tutorial[];
