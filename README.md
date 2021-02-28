@@ -1,5 +1,5 @@
 **BACKEND**
-Criar JAR e Imagem Docker
+mvn install
 docker build -t springbootapp-image .
 
 **FRONTEND**
