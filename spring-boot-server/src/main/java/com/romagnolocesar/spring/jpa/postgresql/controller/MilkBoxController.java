@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.romagnolocesar.spring.jpa.postgresql.model.MilkBox;
 import com.romagnolocesar.spring.jpa.postgresql.repository.MilkBoxRepository;
 
-//@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/api")
 public class MilkBoxController {
@@ -31,14 +31,14 @@ public class MilkBoxController {
 
 	@CrossOrigin
 	@GetMapping("/milkboxes")
-	public ResponseEntity<List<MilkBox>> getAllTutorials(@RequestParam(required = false) String codigo) {
+	public ResponseEntity<List<MilkBox>> getAllMilkBoxes(@RequestParam(required = false) String nome) {
 		try {
 			List<MilkBox> milkboxes = new ArrayList<MilkBox>();
 
-			if (codigo == null)
+			if (nome == null)
 				milkboxRepository.findAll().forEach(milkboxes::add);
 			else
-				milkboxRepository.findByNomeContaining(codigo).forEach(milkboxes::add);
+				milkboxRepository.findByNomeContaining(nome).forEach(milkboxes::add);
 
 			if (milkboxes.isEmpty()) {
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -52,11 +52,11 @@ public class MilkBoxController {
 
 	@CrossOrigin
 	@GetMapping("/milkboxes/{id}")
-	public ResponseEntity<MilkBox> getTutorialById(@PathVariable("id") long id) {
-		Optional<MilkBox> milkboxData = milkboxRepository.findById(id);
+	public ResponseEntity<MilkBox> getMilkBoxById(@PathVariable("id") long id) {
+		Optional<MilkBox> tutorialData = milkboxRepository.findById(id);
 
-		if (milkboxData.isPresent()) {
-			return new ResponseEntity<>(milkboxData.get(), HttpStatus.OK);
+		if (tutorialData.isPresent()) {
+			return new ResponseEntity<>(tutorialData.get(), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}

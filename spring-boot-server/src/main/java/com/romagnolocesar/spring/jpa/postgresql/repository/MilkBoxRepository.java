@@ -8,5 +8,6 @@ import com.romagnolocesar.spring.jpa.postgresql.model.MilkBox;
 
 public interface MilkBoxRepository extends JpaRepository<MilkBox, Long> {
 
-  List<MilkBox> findByNomeContaining(String title);
+  List<MilkBox> findByNomeContaining(String nome);
+
 }
