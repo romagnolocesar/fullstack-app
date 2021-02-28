@@ -4,7 +4,7 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Search by title"
+        placeholder="Procurar pelo Código"
         [(ngModel)]="title"
       />
       <div class="input-group-append">
@@ -23,11 +23,11 @@
     <ul class="list-group">
       <li
         class="list-group-item"
-        *ngFor="let tutorial of tutorials; let i = index"
+        *ngFor="let milkbox of milkboxes; let i = index"
         [class.active]="i == currentIndex"
-        (click)="setActiveTutorial(tutorial, i)"
+        (click)="setActiveMilkbox(milkbox, i)"
       >
-        {{ tutorial.title }}
+        {{ milkbox.codigo }}
       </li>
     </ul>
 
@@ -36,26 +36,22 @@
     </button>
   </div>
   <div class="col-md-6">
-    <div *ngIf="currentTutorial">
+    <div *ngIf="currentMilkbox">
       <h4>Tutorial</h4>
       <div>
-        <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+        <label><strong>Código:</strong></label> {{ currentMilkbox.codigo }}
       </div>
       <div>
-        <label><strong>Description:</strong></label>
-        {{ currentTutorial.description }}
-      </div>
-      <div>
-        <label><strong>Status:</strong></label>
-        {{ currentTutorial.published ? "Published" : "Pending" }}
+        <label><strong>Nome:</strong></label>
+        {{ currentMilkbox.nome }}
       </div>
 
-      <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
+      <a class="badge badge-warning" routerLink="/tutorials/{{ currentMilkbox.id }}">
         Edit
       </a>
     </div>
 
-    <div *ngIf="!currentTutorial">
+    <div *ngIf="!currentMilkbox">
       <br />
       <p>Please click on a Tutorial...</p>
     </div>

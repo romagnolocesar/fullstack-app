@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   back:
-    image: fullstackapp-image
+    image: backendapp-image
     container_name: backend-container
     ports:
       - 8080:8080

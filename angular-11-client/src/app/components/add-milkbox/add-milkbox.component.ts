@@ -4,8 +4,8 @@ import { MilkBoxService } from 'src/app/services/milkbox.service';
 
 @Component({
   selector: 'app-add-tutorial',
-  templateUrl: './add-tutorial.component.html',
-  styleUrls: ['./add-tutorial.component.css']
+  templateUrl: './add-milkbox.component.html',
+  styleUrls: ['./add-milkbox.component.css']
 })
 export class AddMilkBoxComponent implements OnInit {
   tutorial: MilkBox = {
@@ -36,7 +36,7 @@ export class AddMilkBoxComponent implements OnInit {
         });
   }
 
-  newTutorial(): void {
+  newMilkbox(): void {
     this.submitted = false;
     this.tutorial = {
       codigo: '',

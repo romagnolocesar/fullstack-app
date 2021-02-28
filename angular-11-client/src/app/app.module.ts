@@ -5,16 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
-import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
-import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
+import { AddMilkBoxComponent } from './components/add-milkbox/add-milkbox.component';
+import { MilkboxDetailsComponent } from './components/milkbox-details/milkbox-details.component';
+import { MilkboxesListComponent } from './components/milkbox-list/milkboxes-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTutorialComponent,
-    TutorialDetailsComponent,
-    TutorialsListComponent
+    AddMilkBoxComponent,
+    MilkboxDetailsComponent,
+    MilkboxesListComponent
   ],
   imports: [
     BrowserModule,

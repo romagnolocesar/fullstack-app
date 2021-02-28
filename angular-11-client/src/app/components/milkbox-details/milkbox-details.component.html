@@ -1,5 +1,5 @@
 <div>
-  <div *ngIf="currentTutorial.id" class="edit-form">
+  <div *ngIf="currentMilkbox.id" class="edit-form">
     <h4>Tutorial</h4>
     <form>
       <div class="form-group">
@@ -8,57 +8,38 @@
           type="text"
           class="form-control"
           id="title"
-          [(ngModel)]="currentTutorial.title"
-          name="title"
+          [(ngModel)]="currentMilkbox.codigo"
+          name="codigo"
         />
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">Nome</label>
         <input
           type="text"
           class="form-control"
           id="description"
-          [(ngModel)]="currentTutorial.description"
+          [(ngModel)]="currentMilkbox.nome"
           name="description"
         />
       </div>
-
-      <div class="form-group">
-        <label><strong>Status:</strong></label>
-        {{ currentTutorial.published ? "Published" : "Pending" }}
-      </div>
     </form>
 
-    <button
-      class="badge badge-primary mr-2"
-      *ngIf="currentTutorial.published"
-      (click)="updatePublished(false)"
-    >
-      UnPublish
-    </button>
-    <button
-      *ngIf="!currentTutorial.published"
-      class="badge badge-primary mr-2"
-      (click)="updatePublished(true)"
-    >
-      Publish
-    </button>
 
-    <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
-      Delete
+    <button class="badge badge-danger mr-2" (click)="deleteMilkbox()">
+      Deletar
     </button>
 
     <button
       type="submit"
       class="badge badge-success mb-2"
-      (click)="updateTutorial()"
+      (click)="updateMilkbox()"
     >
       Update
     </button>
     <p>{{ message }}</p>
   </div>
 
-  <div *ngIf="!currentTutorial.id">
+  <div *ngIf="!currentMilkbox.id">
     <br />
     <p>Cannot access this Tutorial...</p>
   </div>

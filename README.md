@@ -2,11 +2,11 @@
 
 mvn install
 
-docker build -t springbootapp-image .
+docker build -t backendapp-image .
 
 **FRONTEND**
 
-ngbuild
+ng build
 
 docker build -t frontendapp-image .
 

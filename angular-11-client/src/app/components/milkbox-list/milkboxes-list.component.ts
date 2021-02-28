@@ -1,29 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Tutorial } from 'src/app/models/milkbox.model';
-import { MilkboxService } from 'src/app/services/milkbox.service';
+import { MilkBox } from 'src/app/models/milkbox.model';
+import { MilkBoxService } from 'src/app/services/milkbox.service';
 
 @Component({
   selector: 'app-tutorials-list',
   templateUrl: './milkboxes-list.component.html',
   styleUrls: ['./milkboxes-list.component.css']
 })
-export class TutorialsListComponent implements OnInit {
-  tutorials?: Tutorial[];
-  currentTutorial?: Tutorial;
+export class MilkboxesListComponent implements OnInit {
+  milkboxes?: MilkBox[];
+  currentMilkbox?: MilkBox;
   currentIndex = -1;
   title = '';
 
-  constructor(private tutorialService: MilkboxService) { }
+  constructor(private milkBoxService: MilkBoxService) { }
 
   ngOnInit(): void {
     this.retrieveTutorials();
   }
 
   retrieveTutorials(): void {
-    this.tutorialService.getAll()
+    this.milkBoxService.getAll()
       .subscribe(
         data => {
-          this.tutorials = data;
+          this.milkboxes = data;
           console.log(data);
         },
         error => {
@@ -33,17 +33,17 @@ export class TutorialsListComponent implements OnInit {
 
   refreshList(): void {
     this.retrieveTutorials();
-    this.currentTutorial = undefined;
+    this.currentMilkbox = undefined;
     this.currentIndex = -1;
   }
 
-  setActiveTutorial(tutorial: Tutorial, index: number): void {
-    this.currentTutorial = tutorial;
+  setActiveMilkbox(tutorial: MilkBox, index: number): void {
+    this.currentMilkbox = tutorial;
     this.currentIndex = index;
   }
 
   removeAllTutorials(): void {
-    this.tutorialService.deleteAll()
+    this.milkBoxService.deleteAll()
       .subscribe(
         response => {
           console.log(response);
@@ -55,13 +55,13 @@ export class TutorialsListComponent implements OnInit {
   }
 
   searchTitle(): void {
-    this.currentTutorial = undefined;
+    this.currentMilkbox = undefined;
     this.currentIndex = -1;
 
-    this.tutorialService.findByTitle(this.title)
+    this.milkBoxService.findByTitle(this.title)
       .subscribe(
         data => {
-          this.tutorials = data;
+          this.milkboxes = data;
           console.log(data);
         },
         error => {

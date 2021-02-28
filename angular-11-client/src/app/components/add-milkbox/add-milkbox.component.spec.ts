@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddTutorialComponent } from './add-tutorial.component';
+import { AddTutorialComponent } from './add-milkbox.component';
 
 describe('AddTutorialComponent', () => {
   let component: AddTutorialComponent;
