@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  back:
+    image: fullstackapp-image
+    container_name: backend-container
+    ports:
+      - 8080:8080
+  front:
+    image: frontendapp-image
+    container_name: frontendapp-container
+    ports:
+      - 8081:8081
