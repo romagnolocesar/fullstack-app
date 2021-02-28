@@ -11,7 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc5f0278-970d-4536-8971-36f331ef381b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spring-boot-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-tutorial/add-tutorial.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-tutorial/add-tutorial.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/tutorial-details/tutorial-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/tutorial-details/tutorial-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/tutorials-list/tutorials-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/tutorials-list/tutorials-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/models/milkbox.model.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/models/milkbox.model.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/services/milkbox.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/services/milkbox.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/services/milkbox.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/services/milkbox.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614529851941</updated>
-      <workItem from="1614533378513" duration="5428000" />
+      <workItem from="1614533378513" duration="6793000" />
     </task>
     <servers />
   </component>

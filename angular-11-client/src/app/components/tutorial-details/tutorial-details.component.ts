@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TutorialService } from 'src/app/services/tutorial.service';
+import { MilkboxService } from 'src/app/services/milkbox.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Tutorial } from 'src/app/models/tutorial.model';
+import { Tutorial } from 'src/app/models/milkbox.model';
 
 @Component({
   selector: 'app-tutorial-details',
@@ -17,7 +17,7 @@ export class TutorialDetailsComponent implements OnInit {
   message = '';
 
   constructor(
-    private tutorialService: TutorialService,
+    private tutorialService: MilkboxService,
     private route: ActivatedRoute,
     private router: Router) { }
 

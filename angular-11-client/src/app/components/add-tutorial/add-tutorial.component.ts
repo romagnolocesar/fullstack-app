@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Tutorial } from 'src/app/models/tutorial.model';
-import { TutorialService } from 'src/app/services/tutorial.service';
+import { Tutorial } from 'src/app/models/milkbox.model';
+import { MilkboxService } from 'src/app/services/milkbox.service';
 
 @Component({
   selector: 'app-add-tutorial',
@@ -15,7 +15,7 @@ export class AddTutorialComponent implements OnInit {
   };
   submitted = false;
 
-  constructor(private tutorialService: TutorialService) { }
+  constructor(private tutorialService: MilkboxService) { }
 
   ngOnInit(): void {
   }

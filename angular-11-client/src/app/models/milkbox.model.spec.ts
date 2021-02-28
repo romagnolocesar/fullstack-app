@@ -1,7 +1,7 @@
-import { Tutorial } from './tutorial.model';
+import { MilkBox } from './milkbox.model';
 
-describe('Tutorial', () => {
+describe('MilkBox', () => {
   it('should create an instance', () => {
-    expect(new Tutorial()).toBeTruthy();
+    expect(new MilkBox()).toBeTruthy();
   });
 });

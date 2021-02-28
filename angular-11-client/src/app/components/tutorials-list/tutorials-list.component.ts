@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Tutorial } from 'src/app/models/tutorial.model';
-import { TutorialService } from 'src/app/services/tutorial.service';
+import { Tutorial } from 'src/app/models/milkbox.model';
+import { MilkboxService } from 'src/app/services/milkbox.service';
 
 @Component({
   selector: 'app-tutorials-list',
@@ -13,7 +13,7 @@ export class TutorialsListComponent implements OnInit {
   currentIndex = -1;
   title = '';
 
-  constructor(private tutorialService: TutorialService) { }
+  constructor(private tutorialService: MilkboxService) { }
 
   ngOnInit(): void {
     this.retrieveTutorials();

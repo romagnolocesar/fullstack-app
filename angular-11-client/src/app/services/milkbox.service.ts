@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Tutorial } from '../models/milkbox.model';
+import { MilkBox } from '../models/milkbox.model';
 
 const baseUrl = 'http://localhost:8080/api/milkboxes';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TutorialService {
+export class MilkBoxService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<Tutorial[]> {
-    return this.http.get<Tutorial[]>(baseUrl);
+  getAll(): Observable<MilkBox[]> {
+    return this.http.get<MilkBox[]>(baseUrl);
   }
 
-  get(id: any): Observable<Tutorial> {
+  get(id: any): Observable<MilkBox> {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
@@ -36,7 +36,7 @@ export class TutorialService {
     return this.http.delete(baseUrl);
   }
 
-  findByTitle(title: any): Observable<Tutorial[]> {
-    return this.http.get<Tutorial[]>(`${baseUrl}?title=${title}`);
+  findByTitle(title: any): Observable<MilkBox[]> {
+    return this.http.get<MilkBox[]>(`${baseUrl}?title=${title}`);
   }
 }
