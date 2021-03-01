@@ -5,7 +5,7 @@
        vaga de FullStack Developer. 
        
      - O Backend e o Frontend estão no mesmo projeto. 
-     -  
+     
      - A arquitetura foi desenvolvida para que cada
        aplicação rode modularmente e independente uma da outra, facilitando
        assim a troca, manutenção e evolução do código com o minimo impacto
