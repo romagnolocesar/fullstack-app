@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'milkboxes', pathMatch: 'full' },
   { path: 'milkboxes', component: MilkboxesListComponent },
   { path: 'milkboxes/:id', component: MilkboxDetailsComponent },
-  { path: 'add', component: AddMilkBoxComponent }
+  { path: 'add', component: AddMilkBoxComponent },
 ];
 
 @NgModule({

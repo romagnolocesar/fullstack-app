@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "@types/node": "^10.1.4",
+    "mdbootstrap": "^4.19.2",
+    "ng-uikit": "^0.1.6"
+  }
+}

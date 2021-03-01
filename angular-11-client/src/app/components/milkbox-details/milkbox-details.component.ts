@@ -50,16 +50,4 @@ export class MilkboxDetailsComponent implements OnInit {
           console.log(error);
         });
   }
-
-  deleteMilkbox(): void {
-    this.milkboxService.delete(this.currentMilkbox.id)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.router.navigate(['/milkboxes']);
-        },
-        error => {
-          console.log(error);
-        });
-  }
 }

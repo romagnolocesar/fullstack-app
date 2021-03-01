@@ -12,5 +12,6 @@ docker build -t frontendapp-image .
 
 **SUBIR APLICAÇÃO**
 
-docker-compose -f docker-compose.yaml up
+> docker-compose -f docker-compose.yaml up
+
 

@@ -8,3 +8,18 @@
   cursor: pointer;
   background-color: lightcyan;
 }
+.loaderLayer::content{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999999999;
+  background: rgba(240, 240, 240, 0.95);
+  left: 0;
+  top: 0;
+}
+
+.loaderLayer #content {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+}

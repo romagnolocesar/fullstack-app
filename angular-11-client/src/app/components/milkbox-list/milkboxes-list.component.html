@@ -1,67 +1,83 @@
-<div class="list row">
-  <div class="col-md-8">
-    <div class="input-group mb-3">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Procurar pelo Nome"
-        [(ngModel)]="nome"
-      />
-      <div class="input-group-append">
-        <button
-          class="btn btn-outline-secondary"
-          type="button"
-          (click)="searchNome()"
-        >
-          Buscar
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <h4>Lista de Produtos</h4>
-    <ul class="list-group">
-      <li
-
-        class="list-group-item"
-        *ngFor="let milkbox of milkboxes | slice: pageSize | slice: 0:itemsPerPage; let i = index"
-        [class.active]="i == currentIndex"
-        (click)="setActiveMilkbox(milkbox, i)"
-      >
-        {{ milkbox.nome }}
-      </li>
-    </ul>
-<!--    Carrega depois dos dados carregados -->
-    <div class="col-5 input-group-addon" *ngIf="dataLoaded | async">
-      <ngb-pagination [collectionSize]="100" [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
-    </div>
-
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMilkBoxes()">
-      Remove All
+<div style="">
+  <div #alert class="alert alert-warning alert-dismissible fade show" role="alert">
+    <button type="button" class="close" aria-label="Close" (click)="closeAlert('information')">
+      <span aria-hidden="true">&times;</span>
     </button>
+    <strong>Importante!</strong> Aplicação desenvolvida by César Romagnolo [na torcida pela vaga :)].
   </div>
-  <div class="col-md-6">
-    <div *ngIf="currentMilkbox">
-      <h4>Produtos (caixa de leite)</h4>
-      <div>
-        <label><strong>Código:</strong></label> {{ currentMilkbox.codigo }}
-      </div>
-      <div>
-        <label><strong>Nome:</strong></label>
-        {{ currentMilkbox.nome }}
+  <div *ngIf="deletedItem" #alert class="alert alert-success alert-dismissible fade show" role="alert">
+    <button type="button" class="close" aria-label="Close" (click)="closeAlert('deleted-item')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>DELETADO!</strong> item excluido com sucesso.
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <h4>Lista de Produtos</h4>
+      <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr
+        *ngFor="let milkbox of milkboxes; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveMilkbox(milkbox, i)">
+          <td>{{ milkbox.id }}</td>
+          <td>{{ milkbox.codigo }}</td>
+          <td>{{ milkbox.nome }}</td>
+          <td>
+            <i (click)="deleteMilkboxById(milkbox)" class="bi bi-trash"></i>
+            <span (click)="deleteMilkboxById(milkbox)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+              </svg>
+            </span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <div *ngIf="currentMilkbox">
+        <h4>Produtos (caixa de leite)</h4>
+        <div>
+          <label><strong>Código:</strong></label> {{ currentMilkbox.codigo }}
+        </div>
+        <div>
+          <label><strong>Nome:</strong></label>
+          {{ currentMilkbox.nome }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/milkboxes/{{ currentMilkbox.id }}">
+          Editar
+        </a>
+        <a class="badge badge-danger" (click)="deleteMilkbox()">
+          Excluir
+        </a>
       </div>
 
-      <a class="badge badge-warning" routerLink="/milkboxes/{{ currentMilkbox.id }}">
-        Editar
-      </a>
-      <a class="badge badge-danger" routerLink="/milkboxes/{{ currentMilkbox.id }}">
-        Excluir
-      </a>
-    </div>
-
-    <div *ngIf="!currentMilkbox">
-      <br />
-      <p>Clique em um produto...</p>
+      <div *ngIf="!currentMilkbox">
+        <br />
+        <p>Clique em um produto...</p>
+      </div>
     </div>
   </div>
+</div>
+<div *ngIf="!dataLoaded" class="loaderLayer">
+  <br />
+    <div id="content">
+      <div class="">
+          <div class="spinner-grow text-primary" role="status"></div>
+          <div class="spinner-grow text-info" role="status"></div>
+          <div class="spinner-grow text-danger" role="status"></div>
+      </div>
+      <br>
+    </div>
 </div>

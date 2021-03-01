@@ -25,7 +25,8 @@
     </form>
 
 
-    <button class="badge badge-danger mr-2" (click)="deleteMilkbox()">
+<!--    <button class="badge badge-danger mr-2" (click)="deleteMilkbox()">-->
+      <button class="badge badge-danger mr-2">
       Deletar
     </button>
 
@@ -41,9 +42,11 @@
 
   <div *ngIf="!currentMilkbox.id">
     <br />
-    <p><span class="sr-primary">Acessando Produto...</span></p>
+    <div class="center">
+      <p><span class="sr-primary">Acessando Produto...</span></p>
       <div class="spinner-grow text-primary" role="status"></div>
       <div class="spinner-grow text-info" role="status"></div>
       <div class="spinner-grow text-dark" role="status"></div>
+    </div>
   </div>
 </div>
