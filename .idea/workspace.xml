@@ -12,26 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cc5f0278-970d-4536-8971-36f331ef381b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/services/milkbox.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/services/milkbox.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-server/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-server/src/main/java/com/romagnolocesar/spring/jpa/postgresql/controller/MilkBoxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-server/src/main/java/com/romagnolocesar/spring/jpa/postgresql/controller/MilkBoxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-server/src/main/java/com/romagnolocesar/spring/jpa/postgresql/model/MilkBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-server/src/main/java/com/romagnolocesar/spring/jpa/postgresql/model/MilkBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +89,7 @@
       <updated>1614529851941</updated>
       <workItem from="1614533378513" duration="33627000" />
       <workItem from="1614573138724" duration="446000" />
-      <workItem from="1614574036625" duration="298000" />
+      <workItem from="1614574036625" duration="3850000" />
     </task>
     <servers />
   </component>

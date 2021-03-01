@@ -12,22 +12,24 @@ export class MilkboxesListComponent implements OnInit {
   currentMilkbox?: MilkBox;
   currentIndex = -1;
   nome = '';
+  dataLoaded: Promise<boolean> | undefined;
 
   currentPage = 1;
-  itemsPerPage = 5;
-  pageSize = 10;
+  itemsPerPage = 10;
+  pageSize = 12;
 
   constructor(private milkBoxService: MilkBoxService) { }
 
   ngOnInit(): void {
-    this.retrieveTutorials();
+    this.retrieveMilkBox();
   }
 
-  retrieveTutorials(): void {
+  retrieveMilkBox(): void {
     this.milkBoxService.getAll()
       .subscribe(
         data => {
           this.milkboxes = data;
+          this.dataLoaded = Promise.resolve(true);
         },
         error => {
           console.log(error);
@@ -35,7 +37,7 @@ export class MilkboxesListComponent implements OnInit {
   }
 
   refreshList(): void {
-    this.retrieveTutorials();
+    this.retrieveMilkBox();
     this.currentMilkbox = undefined;
     this.currentIndex = -1;
   }
@@ -69,12 +71,10 @@ export class MilkboxesListComponent implements OnInit {
         error => {
           console.log(error);
         });
-
-    //this.retrieveTutorials();
   }
 
   public onPageChange(pageNum: number): void {
-    this.pageSize = this.itemsPerPage*(pageNum - 1);
+    this.pageSize = this.itemsPerPage * (pageNum - 1);
   }
 
   public changePagesize(num: number): void {

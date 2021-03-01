@@ -31,8 +31,9 @@
         {{ milkbox.nome }}
       </li>
     </ul>
-    <div class="col-5 input-group-addon">
-      <ngb-pagination [collectionSize]="500" [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
+<!--    Carrega depois dos dados carregados -->
+    <div class="col-5 input-group-addon" *ngIf="dataLoaded | async">
+      <ngb-pagination [collectionSize]="100" [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
     </div>
 
     <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMilkBoxes()">
