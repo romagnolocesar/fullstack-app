@@ -22,14 +22,18 @@
     <h4>Lista de Produtos</h4>
     <ul class="list-group">
       <li
+
         class="list-group-item"
-        *ngFor="let milkbox of milkboxes; let i = index"
+        *ngFor="let milkbox of milkboxes | slice: pageSize | slice: 0:itemsPerPage; let i = index"
         [class.active]="i == currentIndex"
         (click)="setActiveMilkbox(milkbox, i)"
       >
         {{ milkbox.nome }}
       </li>
     </ul>
+    <div class="col-5 input-group-addon">
+      <ngb-pagination [collectionSize]="500" [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
+    </div>
 
     <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMilkBoxes()">
       Remove All

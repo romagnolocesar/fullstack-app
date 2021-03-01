@@ -13,6 +13,10 @@ export class MilkboxesListComponent implements OnInit {
   currentIndex = -1;
   nome = '';
 
+  currentPage = 1;
+  itemsPerPage = 5;
+  pageSize = 10;
+
   constructor(private milkBoxService: MilkBoxService) { }
 
   ngOnInit(): void {
@@ -24,7 +28,6 @@ export class MilkboxesListComponent implements OnInit {
       .subscribe(
         data => {
           this.milkboxes = data;
-          console.log(data);
         },
         error => {
           console.log(error);
@@ -62,7 +65,6 @@ export class MilkboxesListComponent implements OnInit {
       .subscribe(
         data => {
           this.milkboxes = data;
-          console.log(data);
         },
         error => {
           console.log(error);
@@ -71,4 +73,11 @@ export class MilkboxesListComponent implements OnInit {
     //this.retrieveTutorials();
   }
 
+  public onPageChange(pageNum: number): void {
+    this.pageSize = this.itemsPerPage*(pageNum - 1);
+  }
+
+  public changePagesize(num: number): void {
+    this.itemsPerPage = this.pageSize + num;
+  }
 }

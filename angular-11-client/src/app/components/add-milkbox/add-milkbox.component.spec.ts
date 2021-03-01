@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddTutorialComponent } from './add-milkbox.component';
+import { AddMilkBoxComponent } from './add-milkbox.component';
 
 describe('AddTutorialComponent', () => {
-  let component: AddTutorialComponent;
-  let fixture: ComponentFixture<AddTutorialComponent>;
+  let component: AddMilkBoxComponent;
+  let fixture: ComponentFixture<AddMilkBoxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddTutorialComponent ]
+      declarations: [ AddMilkBoxComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddTutorialComponent);
+    fixture = TestBed.createComponent(AddMilkBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

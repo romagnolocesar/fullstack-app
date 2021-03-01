@@ -21,7 +21,7 @@ export class MilkBoxService {
   }
 
   create(data: any): Observable<any> {
-    return this.http.get(`${baseUrl}/add`, data);
+    return this.http.post(`${baseUrl}/add`, data);
   }
 
   update(id: any, data: any): Observable<any> {

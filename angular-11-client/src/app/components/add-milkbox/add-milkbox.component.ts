@@ -8,7 +8,7 @@ import { MilkBoxService } from 'src/app/services/milkbox.service';
   styleUrls: ['./add-milkbox.component.css']
 })
 export class AddMilkBoxComponent implements OnInit {
-  tutorial: MilkBox = {
+  milkBox: MilkBox = {
     codigo: '',
     nome: ''
   };
@@ -21,8 +21,8 @@ export class AddMilkBoxComponent implements OnInit {
 
   saveMilkBox(): void {
     const data = {
-      title: this.tutorial.codigo,
-      description: this.tutorial.nome
+      codigo: this.milkBox.codigo,
+      nome: this.milkBox.nome
     };
 
     this.milkboxService.create(data)
@@ -38,7 +38,7 @@ export class AddMilkBoxComponent implements OnInit {
 
   newMilkbox(): void {
     this.submitted = false;
-    this.tutorial = {
+    this.milkBox = {
       codigo: '',
       nome: ''
     };

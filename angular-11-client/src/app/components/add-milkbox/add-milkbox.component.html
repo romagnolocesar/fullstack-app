@@ -2,24 +2,24 @@
   <div class="submit-form">
     <div *ngIf="!submitted">
       <div class="form-group">
-        <label for="title">Codigo</label>
+        <label for="codigo">Codigo</label>
         <input
           type="text"
           class="form-control"
-          id="title"
+          id="codigo"
           required
-          [(ngModel)]="tutorial.codigo"
+          [(ngModel)]="milkBox.codigo"
           name="codigo"
         />
       </div>
 
       <div class="form-group">
-        <label for="description">Nome</label>
+        <label for="nome">Nome</label>
         <input
           class="form-control"
-          id="description"
+          id="nome"
           required
-          [(ngModel)]="tutorial.nome"
+          [(ngModel)]="milkBox.nome"
           name="nome"
         />
       </div>

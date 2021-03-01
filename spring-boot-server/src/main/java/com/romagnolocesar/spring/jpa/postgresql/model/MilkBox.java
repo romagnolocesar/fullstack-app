@@ -5,9 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "produto")
 public class MilkBox {
-
+	@SequenceGenerator(name = "port_gen", sequenceName = "port_gen",  initialValue = 2000)
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "port_gen")
 	private long id;
 
 	@Column(name = "codigo")
