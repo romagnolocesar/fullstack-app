@@ -21,7 +21,7 @@ export class MilkBoxService {
   }
 
   create(data: any): Observable<any> {
-    return this.http.post(baseUrl, data);
+    return this.http.get(`${baseUrl}/add`, data);
   }
 
   update(id: any, data: any): Observable<any> {
@@ -36,7 +36,7 @@ export class MilkBoxService {
     return this.http.delete(baseUrl);
   }
 
-  findByTitle(title: any): Observable<MilkBox[]> {
-    return this.http.get<MilkBox[]>(`${baseUrl}?title=${title}`);
+  findByNome(title: any): Observable<MilkBox[]> {
+    return this.http.get<MilkBox[]>(`${baseUrl}?nome=${title}`);
   }
 }

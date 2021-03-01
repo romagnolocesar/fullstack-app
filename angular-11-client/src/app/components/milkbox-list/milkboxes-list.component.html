@@ -4,22 +4,22 @@
       <input
         type="text"
         class="form-control"
-        placeholder="Procurar pelo Código"
-        [(ngModel)]="title"
+        placeholder="Procurar pelo Nome"
+        [(ngModel)]="nome"
       />
       <div class="input-group-append">
         <button
           class="btn btn-outline-secondary"
           type="button"
-          (click)="searchTitle()"
+          (click)="searchNome()"
         >
-          Search
+          Buscar
         </button>
       </div>
     </div>
   </div>
   <div class="col-md-6">
-    <h4>Tutorials List</h4>
+    <h4>Lista de Produtos</h4>
     <ul class="list-group">
       <li
         class="list-group-item"
@@ -27,17 +27,17 @@
         [class.active]="i == currentIndex"
         (click)="setActiveMilkbox(milkbox, i)"
       >
-        {{ milkbox.codigo }}
+        {{ milkbox.nome }}
       </li>
     </ul>
 
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
+    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllMilkBoxes()">
       Remove All
     </button>
   </div>
   <div class="col-md-6">
     <div *ngIf="currentMilkbox">
-      <h4>Tutorial</h4>
+      <h4>Produtos (caixa de leite)</h4>
       <div>
         <label><strong>Código:</strong></label> {{ currentMilkbox.codigo }}
       </div>
@@ -46,14 +46,17 @@
         {{ currentMilkbox.nome }}
       </div>
 
-      <a class="badge badge-warning" routerLink="/tutorials/{{ currentMilkbox.id }}">
-        Edit
+      <a class="badge badge-warning" routerLink="/milkboxes/{{ currentMilkbox.id }}">
+        Editar
+      </a>
+      <a class="badge badge-danger" routerLink="/milkboxes/{{ currentMilkbox.id }}">
+        Excluir
       </a>
     </div>
 
     <div *ngIf="!currentMilkbox">
       <br />
-      <p>Please click on a Tutorial...</p>
+      <p>Clique em um produto...</p>
     </div>
   </div>
 </div>

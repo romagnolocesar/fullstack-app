@@ -56,7 +56,7 @@ export class MilkboxDetailsComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/tutorials']);
+          this.router.navigate(['/milkboxes']);
         },
         error => {
           console.log(error);

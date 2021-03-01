@@ -11,7 +11,7 @@ export class MilkboxesListComponent implements OnInit {
   milkboxes?: MilkBox[];
   currentMilkbox?: MilkBox;
   currentIndex = -1;
-  title = '';
+  nome = '';
 
   constructor(private milkBoxService: MilkBoxService) { }
 
@@ -42,7 +42,7 @@ export class MilkboxesListComponent implements OnInit {
     this.currentIndex = index;
   }
 
-  removeAllTutorials(): void {
+  removeAllMilkBoxes(): void {
     this.milkBoxService.deleteAll()
       .subscribe(
         response => {
@@ -54,11 +54,11 @@ export class MilkboxesListComponent implements OnInit {
         });
   }
 
-  searchTitle(): void {
+  searchNome(): void {
     this.currentMilkbox = undefined;
     this.currentIndex = -1;
 
-    this.milkBoxService.findByTitle(this.title)
+    this.milkBoxService.findByNome(this.nome)
       .subscribe(
         data => {
           this.milkboxes = data;
@@ -67,6 +67,8 @@ export class MilkboxesListComponent implements OnInit {
         error => {
           console.log(error);
         });
+
+    //this.retrieveTutorials();
   }
 
 }

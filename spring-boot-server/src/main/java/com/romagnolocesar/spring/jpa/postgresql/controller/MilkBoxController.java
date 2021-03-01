@@ -63,7 +63,7 @@ public class MilkBoxController {
 	}
 
 	@CrossOrigin
-	@PostMapping("/milkboxes/add")
+	@RequestMapping("/milkboxes/add")
 	public ResponseEntity<MilkBox> createMilkBox(@RequestBody MilkBox milkbox) {
 		try {
 			MilkBox _milkbox = milkboxRepository

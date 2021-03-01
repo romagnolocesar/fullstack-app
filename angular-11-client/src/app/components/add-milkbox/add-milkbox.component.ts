@@ -19,7 +19,7 @@ export class AddMilkBoxComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  saveTutorial(): void {
+  saveMilkBox(): void {
     const data = {
       title: this.tutorial.codigo,
       description: this.tutorial.nome

@@ -5,9 +5,9 @@ import { MilkboxDetailsComponent } from './components/milkbox-details/milkbox-de
 import { AddMilkBoxComponent } from './components/add-milkbox/add-milkbox.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
-  { path: 'tutorials', component: MilkboxesListComponent },
-  { path: 'tutorials/:id', component: MilkboxDetailsComponent },
+  { path: '', redirectTo: 'milkboxes', pathMatch: 'full' },
+  { path: 'milkboxes', component: MilkboxesListComponent },
+  { path: 'milkboxes/:id', component: MilkboxDetailsComponent },
   { path: 'add', component: AddMilkBoxComponent }
 ];
 
