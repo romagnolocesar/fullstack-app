@@ -1,34 +1,35 @@
+**BACK-END (API)**
+---
+***Requisitos Dev***
 
+ - [ ] Apache Maven 3.6.3*
+ - [ ] Node Package Manager: '7.5.3'
+ - [ ] NodeJs: '15.10.0'
 
+O **Backend** foi desenvolvido em *SpringBoot 2.3.5 com JPA* e *Hibernate* para persistencia dos dados. Rodando em um container com base **`openjdk:8-jdk-alpine`** no **`Docker 20.10.2`**
 
+ **Instalação e empacotamento .JAR**
 
+Entrar na pasta raiz do projeto do Backend **spring-boot-server**
 
+Validar e compilar o projeto, testá-lo através de seus testes unitários (ainda preciso implementar) e gerar o pacote com o código compilado:  
 
+    > mvn install
 
-**REQUISITOS**
- - [ ] Maven
- - [ ] NodeJs e NodePackageManager
- - [ ] Docker
- - [ ] Angular CLI (npm install -g @angular/cli)
+ **Criação da Imagem Docker**
+ 
 
-  
-**RODAR A APLICAÇÃO**  
-  
-**Empacotar a Distribuição**  
-  (fullstack-app/angular-11-client): 
+    > docker build -t backendapp-image . 
 
->   mvn install
+---
+**Rodando a Imagem em um Container Separado *(NÃO RECOMENDADO)***
 
-  
-**Criar a Imagem Docker**  
-  
-(fullstack-app/angular-11-client): 
+> A imagem gerada acima deverá subir em um container dentro de um
+> container pai usando o ***docker-compose*** para que toda a
+> comunicação dentro do padrão **REST FULL** sejá respeitada evitando
+> problemas de segurança ou cross-domain, mas para subir a imagem gerada
+> acima em um container separado para desenvolvimento ou testes poderá
+> rodar o comando  
 
-> docker build -t backendapp-image .
+    > docker run -p 8080:8080 --name backendapp-container backendapp-image
 
-  
-**Rodar o Container (separado da aplicação)**  
-  
-(fullstack-app/angular-11-client): 
-
-> docker run -p 8081:8081 --name backendapp-container backendapp-image
