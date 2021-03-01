@@ -12,8 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc5f0278-970d-4536-8971-36f331ef381b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-server/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-server/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1614598501268" duration="2586000" />
       <workItem from="1614601139594" duration="888000" />
       <workItem from="1614602055289" duration="24549000" />
-      <workItem from="1614631773620" duration="5406000" />
+      <workItem from="1614631773620" duration="7070000" />
     </task>
     <servers />
   </component>
@@ -155,10 +154,11 @@
       <screen x="0" y="0" width="1360" height="738" />
     </state>
     <state x="181" y="14" key="SettingsEditor/0.0.1360.738@0.0.1360.738" timestamp="1614601341792" />
-    <state x="387" y="0" width="585" height="738" key="find.popup" timestamp="1614567693250">
-      <screen x="0" y="0" width="1360" height="738" />
+    <state x="437" y="0" width="661" height="834" key="find.popup" timestamp="1614638275976">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="387" y="0" width="585" height="738" key="find.popup/0.0.1360.738@0.0.1360.738" timestamp="1614567693250" />
+    <state x="437" y="0" width="661" height="834" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1614638275976" />
     <state x="403" y="140" key="refactoring.ChangeSignatureDialog" timestamp="1614625588467">
       <screen x="0" y="0" width="1360" height="738" />
     </state>
