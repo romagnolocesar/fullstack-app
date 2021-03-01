@@ -56,9 +56,8 @@ Validar e compilar o projeto, testá-lo através de seus testes unitários (aind
 > **Request URL:** http://localhost:8080/api/milkboxes/add
 > **Request Method:** POST
 > **Response** Content-Type: application/json `{"id":2701,"codigo":"1212","nome":"1212"}`
-> 
-> 
-> **ATUALIZAR PRODUTO**
+
+**ATUALIZAR PRODUTO**
 > **Request URL:** http://localhost:8080/api/milkboxes/2651
 > **Request Method:** PUT
 > **Request Payload:** `{"id":2651,"codigo":"cesarr","nome":"666"}`
