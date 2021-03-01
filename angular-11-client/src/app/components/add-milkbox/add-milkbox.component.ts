@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { MilkBox } from 'src/app/models/milkbox.model';
 import { MilkBoxService } from 'src/app/services/milkbox.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-tutorial',
@@ -8,13 +9,19 @@ import { MilkBoxService } from 'src/app/services/milkbox.service';
   styleUrls: ['./add-milkbox.component.css']
 })
 export class AddMilkBoxComponent implements OnInit {
+  @ViewChild('alert', { static: true }) alert: ElementRef | undefined;
   milkBox: MilkBox = {
     codigo: '',
     nome: ''
   };
   submitted = false;
+  addedItem: boolean | undefined;
 
-  constructor(private milkboxService: MilkBoxService) { }
+  constructor(
+    private milkboxService: MilkBoxService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -28,12 +35,19 @@ export class AddMilkBoxComponent implements OnInit {
     this.milkboxService.create(data)
       .subscribe(
         response => {
-          console.log(response);
+          this.addedItem = true;
           this.submitted = true;
         },
         error => {
           console.log(error);
         });
+  }
+
+  closeAlert(type: string) {
+    if (type === 'added-item'){
+      this.router.navigate(['/milkboxes']);
+    }
+    this?.alert?.nativeElement.classList.remove('show');
   }
 
   newMilkbox(): void {

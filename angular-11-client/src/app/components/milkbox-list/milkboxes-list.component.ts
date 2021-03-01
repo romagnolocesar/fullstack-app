@@ -17,10 +17,7 @@ export class MilkboxesListComponent implements OnInit {
   @ViewChild('alert', { static: true }) alert: ElementRef | undefined;
 
   milkboxes?: MilkBox[];
-  currentMilkbox: MilkBox = {
-    codigo: '',
-    nome: ''
-  };
+  currentMilkbox: MilkBox = {};
   fordeleteMilkbox: MilkBox = {
     id: '',
     codigo: '',
