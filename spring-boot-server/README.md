@@ -33,3 +33,39 @@ Validar e compilar o projeto, testá-lo através de seus testes unitários (aind
 
     > docker run -p 8080:8080 --name backendapp-container backendapp-image
 
+# ENDPOINTS
+
+
+**BUSCAR TODOS PRODUTOS**
+
+> **Request URL**: http://localhost:8080/api/milkboxes
+> **Request Method:** GET
+
+**BUSCAR PRODUTO PELO ID**
+
+> **Request URL:** http://localhost:8080/api/milkboxes/500 Request Method:
+> **Request Method:** GET
+
+**BUSCAR PRODUTO PELO NOME**
+
+> **Request URL:** http://localhost:8080/api/milkboxes?nome=LEITE%20UHT%20INTEGRAL
+> **Request Method:** GET
+
+**CADASTRAR NOVO PRODUTO**
+
+> **Request URL:** http://localhost:8080/api/milkboxes/add
+> **Request Method:** POST
+> **Response** Content-Type: application/json `{"id":2701,"codigo":"1212","nome":"1212"}`
+> 
+> 
+> **ATUALIZAR PRODUTO**
+> **Request URL:** http://localhost:8080/api/milkboxes/2651
+> **Request Method:** PUT
+> **Request Payload:** `{"id":2651,"codigo":"cesarr","nome":"666"}`
+> **Response Content-Type:** application/json 
+> `{"id":2651,"codigo":"cesarr","nome":"666"}`
+
+**DELETAR PRODUTO PELO ID**
+
+> **Request URL:** http://localhost:8080/api/milkboxes/2651
+> **Request Method:** DELETE
