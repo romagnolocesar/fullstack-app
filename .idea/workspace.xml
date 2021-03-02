@@ -10,19 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc5f0278-970d-4536-8971-36f331ef381b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="cc5f0278-970d-4536-8971-36f331ef381b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +95,7 @@
       <workItem from="1614598501268" duration="2586000" />
       <workItem from="1614601139594" duration="888000" />
       <workItem from="1614602055289" duration="24549000" />
-      <workItem from="1614631773620" duration="20228000" />
+      <workItem from="1614631773620" duration="20442000" />
     </task>
     <servers />
   </component>
