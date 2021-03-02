@@ -112,6 +112,7 @@ export class MilkboxesListComponent implements OnInit {
           console.log(data);
           // this.router.navigate(['/milkboxes']);
           this.deletedItem = true;
+          location.reload();
           this.load('/milkboxes');
         },
         error => {

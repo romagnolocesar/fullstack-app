@@ -47,7 +47,7 @@ export class MilkboxDetailsComponent implements OnInit {
       .subscribe(
         response => {
           this.dataLoaded = Promise.resolve(true);
-          this.message = response.message ? response.message : 'This tutorial was updated successfully!';
+          this.message = response.message ? response.message : 'Produto atualizado com sucesso!';
         },
         error => {
           this.dataLoaded = Promise.resolve(true);
