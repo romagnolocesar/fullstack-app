@@ -1,52 +1,48 @@
-<div>
-  <div *ngIf="currentMilkbox.id" class="edit-form">
-    <h4>Tutorial</h4>
-    <form>
-      <div class="form-group">
-        <label for="title">Código</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          [(ngModel)]="currentMilkbox.codigo"
-          name="codigo"
-        />
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class=" col-lg-6 col-md-8">
+      <div class="card p-3">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <h2 class="heading text-center">Editar Produto</h2>
+          </div>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="title">Código</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              [(ngModel)]="currentMilkbox.codigo"
+              name="codigo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              [(ngModel)]="currentMilkbox.nome"
+              name="description"
+            />
+          </div>
+          <button type="submit" (click)="updateMilkbox()" class="btn btn-info">Atualizar</button>
+          <p>{{ message }}</p>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="description">Nome</label>
-        <input
-          type="text"
-          class="form-control"
-          id="description"
-          [(ngModel)]="currentMilkbox.nome"
-          name="description"
-        />
-      </div>
-    </form>
-
-
-<!--    <button class="badge badge-danger mr-2" (click)="deleteMilkbox()">-->
-      <button class="badge badge-danger mr-2">
-      Deletar
-    </button>
-
-    <button
-      type="submit"
-      class="badge badge-success mb-2"
-      (click)="updateMilkbox()"
-    >
-      Atualizar
-    </button>
-    <p>{{ message }}</p>
+    </div>
   </div>
-
-  <div *ngIf="!currentMilkbox.id">
-    <br />
-    <div class="center">
-      <p><span class="sr-primary">Acessando Produto...</span></p>
+</div>
+<div *ngIf="!dataLoaded" class="loaderLayer">
+  <br />
+  <div id="content">
+    <div class="">
       <div class="spinner-grow text-primary" role="status"></div>
       <div class="spinner-grow text-info" role="status"></div>
-      <div class="spinner-grow text-dark" role="status"></div>
+      <div class="spinner-grow text-danger" role="status"></div>
     </div>
+    <br>
   </div>
 </div>

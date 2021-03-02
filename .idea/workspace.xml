@@ -11,7 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc5f0278-970d-4536-8971-36f331ef381b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/add-milkbox/add-milkbox.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-details/milkbox-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-11-client/src/app/components/milkbox-list/milkboxes-list.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +51,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
-    <property name="ts.external.directory.path" value="D:\projetos\fullstack-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Arquivos de Programas\JetBrains IntelliJ IDEA Ultimate 2020.1 x64\ideaIU-2020.1.windows\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -97,7 +107,7 @@
       <workItem from="1614598501268" duration="2586000" />
       <workItem from="1614601139594" duration="888000" />
       <workItem from="1614602055289" duration="24549000" />
-      <workItem from="1614631773620" duration="7267000" />
+      <workItem from="1614631773620" duration="20228000" />
     </task>
     <servers />
   </component>
@@ -129,22 +139,26 @@
       <screen x="0" y="0" width="1360" height="738" />
     </state>
     <state x="460" y="124" key="FileChooserDialogImpl/0.0.1360.738@0.0.1360.738" timestamp="1614567549674" />
-    <state width="1317" height="182" key="GridCell.Tab.0.bottom" timestamp="1614626820286">
-      <screen x="0" y="0" width="1360" height="738" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1614639539279">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1317" height="182" key="GridCell.Tab.0.bottom/0.0.1360.738@0.0.1360.738" timestamp="1614626820286" />
-    <state width="1317" height="182" key="GridCell.Tab.0.center" timestamp="1614626820286">
-      <screen x="0" y="0" width="1360" height="738" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1614639539279" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1614639539278">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1317" height="182" key="GridCell.Tab.0.center/0.0.1360.738@0.0.1360.738" timestamp="1614626820286" />
-    <state width="1317" height="182" key="GridCell.Tab.0.left" timestamp="1614626820286">
-      <screen x="0" y="0" width="1360" height="738" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1614639539278" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1614639539278">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1317" height="182" key="GridCell.Tab.0.left/0.0.1360.738@0.0.1360.738" timestamp="1614626820286" />
-    <state width="1317" height="182" key="GridCell.Tab.0.right" timestamp="1614626820286">
-      <screen x="0" y="0" width="1360" height="738" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1614639539278" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1614639539278">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1317" height="182" key="GridCell.Tab.0.right/0.0.1360.738@0.0.1360.738" timestamp="1614626820286" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1614639539278" />
     <state x="491" y="71" key="RollbackChangesDialog" timestamp="1614598976333">
       <screen x="0" y="0" width="1360" height="738" />
     </state>

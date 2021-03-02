@@ -3,40 +3,50 @@
     <button type="button" class="close" aria-label="Close" (click)="closeAlert('added-item')">
       <span aria-hidden="true">&times;</span>
     </button>
-    <strong>ADICIONADO!</strong> item adicionado com sucesso, feche para ser redirecionado.<br>
-    <button class="btn btn-success" (click)="newMilkbox()">Adicionar Outro</button>
+    <strong>ADICIONADO!</strong> Item adicionado com sucesso, <b>FECHE PARA VOLTAR</b> ou <span class="badge bg-success" (click)="newMilkbox()">Adicione Outro</span>
   </div>
-  <div class="submit-form">
-    <div *ngIf="!submitted">
-      <div class="form-group">
-        <label for="codigo">Codigo</label>
-        <input
-          type="text"
-          class="form-control"
-          id="codigo"
-          required
-          [(ngModel)]="milkBox.codigo"
-          name="codigo"
-        />
+  <div  *ngIf="!submitted" class="container-fluid">
+    <div class="row justify-content-center">
+      <div class=" col-lg-6 col-md-8">
+        <div class="card p-3">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <h2 class="heading text-center">Adicionar Produto</h2>
+            </div>
+          </div>
+          <form class="form-card">
+            <div class="submit-form">
+              <div>
+                <div class="form-group">
+                  <label for="codigo">Codigo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="codigo"
+                    required
+                    [(ngModel)]="milkBox.codigo"
+                    name="codigo"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input
+                    class="form-control"
+                    id="nome"
+                    required
+                    [(ngModel)]="milkBox.nome"
+                    name="nome"
+                  />
+                </div>
+
+                <button (click)="saveMilkBox()" class="btn btn-info">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label for="nome">Nome</label>
-        <input
-          class="form-control"
-          id="nome"
-          required
-          [(ngModel)]="milkBox.nome"
-          name="nome"
-        />
-      </div>
-
-      <button (click)="saveMilkBox()" class="btn btn-success">Enviar</button>
-    </div>
-
-    <div *ngIf="submitted">
-      <h4>Caixa de Leite adicionado com sucesso!</h4>
-
     </div>
   </div>
 </div>
+

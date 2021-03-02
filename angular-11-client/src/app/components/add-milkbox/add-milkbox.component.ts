@@ -24,6 +24,7 @@ export class AddMilkBoxComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
   }
 
   saveMilkBox(): void {
@@ -44,18 +45,20 @@ export class AddMilkBoxComponent implements OnInit {
   }
 
   closeAlert(type: string) {
+    this?.alert?.nativeElement.classList.remove('show');
     if (type === 'added-item'){
       this.router.navigate(['/milkboxes']);
     }
-    this?.alert?.nativeElement.classList.remove('show');
   }
 
   newMilkbox(): void {
     this.submitted = false;
+    this.addedItem = false;
     this.milkBox = {
       codigo: '',
       nome: ''
     };
+    this.closeAlert('');
   }
 
 }

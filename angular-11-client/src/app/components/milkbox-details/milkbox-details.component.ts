@@ -15,6 +15,8 @@ export class MilkboxDetailsComponent implements OnInit {
   };
   message = '';
 
+  dataLoaded: Promise<boolean> | undefined;
+
   constructor(
     private milkboxService: MilkBoxService,
     private route: ActivatedRoute,
@@ -29,10 +31,11 @@ export class MilkboxDetailsComponent implements OnInit {
     this.milkboxService.get(id)
       .subscribe(
         data => {
+          this.dataLoaded = Promise.resolve(true);
           this.currentMilkbox = data;
-          console.log(data);
         },
         error => {
+          this.dataLoaded = Promise.resolve(true);
           console.log(error);
         });
   }
@@ -43,10 +46,11 @@ export class MilkboxDetailsComponent implements OnInit {
     this.milkboxService.update(this.currentMilkbox.id, this.currentMilkbox)
       .subscribe(
         response => {
-          console.log(response);
+          this.dataLoaded = Promise.resolve(true);
           this.message = response.message ? response.message : 'This tutorial was updated successfully!';
         },
         error => {
+          this.dataLoaded = Promise.resolve(true);
           console.log(error);
         });
   }

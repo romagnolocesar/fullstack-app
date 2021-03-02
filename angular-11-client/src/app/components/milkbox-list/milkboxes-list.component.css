@@ -1,13 +1,4 @@
-.list {
-  text-align: left;
-  max-width: 750px;
-  margin: auto;
-}
-
-.list-group-item{
-  cursor: pointer;
-  background-color: lightcyan;
-}
+/* LOADER OVERLAY*/
 .loaderLayer::content{
   position: fixed;
   width: 100vw;
@@ -18,8 +9,102 @@
   top: 0;
 }
 
+/* LOADER CONTEUDO*/
 .loaderLayer #content {
   position: fixed;
   top: 50%;
   right: 50%;
+}
+
+/* TABELA */
+#listTable{
+  /*background-color: #f8fdff;*/
+}
+
+/* LINHA */
+#listTable tr{
+  cursor: pointer;
+  border-bottom: 1px solid #494f54;
+}
+
+#listTable tr .active{
+  background-color: #17a2b8;
+}
+
+/* ODD */
+#listTable .odd{
+  background-color: #f8fdff;
+}
+
+/* EVEN */
+#listTable .even{
+  background-color: #eaf5ff;
+}
+
+/* LINHA HOVER*/
+#listTable tr:hover{
+  background-color: #d1e4f9;
+  border: 1px solid #494f54;
+}
+
+
+/* FORMS */
+
+.form-card input,
+.form-card textarea {
+  padding: 10px 15px 5px 15px;
+  border: none;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: arial;
+  color: #2C3E50;
+  font-size: 14px;
+  letter-spacing: 1px
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  -moz-box-shadow: 0px 0px 0px 1.5px skyblue !important;
+  -webkit-box-shadow: 0px 0px 0px 1.5px skyblue !important;
+  box-shadow: 0px 0px 0px 1.5px skyblue !important;
+  font-weight: bold;
+  border: 1px solid #304FFE;
+  outline-width: 0
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  overflow: hidden
+}
+
+.input-group input {
+  position: relative;
+  height: 80px;
+  margin-left: 1px;
+  margin-right: 1px;
+  border-radius: 6px;
+  padding-top: 30px;
+  padding-left: 25px
+}
+
+.input-group label {
+  position: absolute;
+  height: 24px;
+  background: none;
+  border-radius: 6px;
+  line-height: 48px;
+  font-size: 15px;
+  color: gray;
+  width: 100%;
+  font-weight: 100;
+  padding-left: 25px
+}
+
+input:focus+label {
+  color: #304FFE
 }
