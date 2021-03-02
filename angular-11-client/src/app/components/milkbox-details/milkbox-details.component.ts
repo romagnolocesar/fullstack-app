@@ -15,6 +15,8 @@ export class MilkboxDetailsComponent implements OnInit {
   };
   message = '';
 
+  updatedItem: boolean | undefined;
+
   dataLoaded: Promise<boolean> | undefined;
 
   constructor(
@@ -46,12 +48,18 @@ export class MilkboxDetailsComponent implements OnInit {
     this.milkboxService.update(this.currentMilkbox.id, this.currentMilkbox)
       .subscribe(
         response => {
+          this.updatedItem = true;
           this.dataLoaded = Promise.resolve(true);
-          this.message = response.message ? response.message : 'Produto atualizado com sucesso!';
+
         },
         error => {
           this.dataLoaded = Promise.resolve(true);
           console.log(error);
         });
   }
+
+  gotoList(): void {
+      this.router.navigate(['/milkboxes']);
+  }
+
 }
