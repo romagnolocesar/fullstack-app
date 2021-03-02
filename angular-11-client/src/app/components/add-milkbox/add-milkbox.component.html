@@ -3,7 +3,7 @@
     <button type="button" class="close" aria-label="Close" (click)="closeAlert('added-item')">
       <span aria-hidden="true">&times;</span>
     </button>
-    <strong>ADICIONADO!</strong> Item adicionado com sucesso, <b>FECHE PARA VOLTAR</b> ou <span class="badge bg-success" (click)="newMilkbox()">Adicione Outro</span>
+    <strong>ADICIONADO!</strong> Item adicionado com sucesso, <b>FECHE PARA VOLTAR</b> ou <span class="badge bg-success" style="cursor: pointer" (click)="newMilkbox()">Adicione Outro</span>
   </div>
   <div  *ngIf="!submitted" class="container-fluid">
     <div class="row justify-content-center">
